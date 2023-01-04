@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+            
+    <title> Modelo Regresion </title>
+
+    <!-- Importar TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+ 
+</head>
+
+<body>
+    <button id="saveKnn" onclick="saveKnn();">Save Model</button>
+    <button id="loadKnn" onclick="loadKnn();">Load Model</button>
+    <br>
+    <br>
+    
+    <video autoplay="" playsinline muted id="webcam" width="224" height="224"></video>
+
+    <br>
+    <br>
+    <button id="clase-a" onclick="addExample(1)"> 20 </button>
+    <button id="clase-a" onclick="addExample(2)"> 50 </button>
+    <button id="clase-a" onclick="addExample(3)"> 100 </button>
+    <button id="clase-a" onclick="addExample(4)"> 500 </button>
+    <button id="clase-a" onclick="addExample(5)"> 1000</button>
+    <br>
+    <br>
+
+    <div id="prediction"></div>
+    <div id="probability"></div>
+    <div id="prediction2"></div>
+
+
+    <!-- Importar el archivo principal -->
+    <script src="scripts.js?v=14"></script>
+</body>
+</html>
